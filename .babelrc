@@ -1,8 +1,6 @@
 {
   "presets": [
-    ["env", {
-      "node": 4
-    }]
+    ["env", { "node": true }]
   ],
   "plugins": [
     "transform-async-generator-functions"

@@ -17,6 +17,7 @@ describe('register', () => {
   beforeAll(async () => {
     db = await MongoClient.connect('mongodb://localhost:27017/test');
     col = db.collection('test');
+    await col.remove({});
     await col.insertMany(fixtures);
   });
 

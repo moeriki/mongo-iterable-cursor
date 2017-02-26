@@ -1,0 +1,31 @@
+{
+  "name": "mongo-iterable-cursor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint *.js test/",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Dieter Luypaert <dieterluypaert@icloud.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "mongodb": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "~6.23.0",
+    "babel-eslint": "~7.1.1",
+    "babel-jest": "~19.0.0",
+    "babel-plugin-transform-async-generator-functions": "~6.22.0",
+    "babel-polyfill": "~6.23.0",
+    "babel-preset-env": "~1.1.10",
+    "eslint": "~3.16.1",
+    "eslint-config-muriki": "~8.4.0",
+    "eslint-plugin-import": "~2.2.0",
+    "eslint-plugin-jasmine": "~2.2.0",
+    "eslint-plugin-node": "~4.1.0",
+    "jest": "~19.0.2",
+    "mongodb": "^2.2.24"
+  }
+}

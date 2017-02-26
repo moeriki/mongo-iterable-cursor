@@ -1,0 +1,20 @@
+language: "node_js"
+
+node_js:
+  - "4"
+  - "5"
+  - "6"
+
+script:
+  - "npm test"
+
+after_success:
+  - "npm run coveralls"
+
+notifications:
+  email: false
+  slack:
+    rooms:
+      - moeriki:Gqf2TnMQj95R0y9cNLQhw6Eo#updates
+    on_success: change
+    on_failure: always

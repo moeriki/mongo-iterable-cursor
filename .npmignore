@@ -1,0 +1,9 @@
+.babelrc
+.editorconfig
+.eslintrc.js
+.gitignore
+.npmignore
+.travis.yml
+coverage/
+node_modules/
+test/

@@ -1,16 +1,22 @@
 {
   "name": "mongo-iterable-cursor",
   "version": "1.0.0",
-  "description": "",
+  "description": "Turn your mongodb cursor into an async iterable",
+  "keywords": [
+    "async",
+    "cursor",
+    "iterable",
+    "mongodb"
+  ],
+  "author": "Dieter Luypaert <dieterluypaert@icloud.com>",
+  "license": "MIT",
+  "repository": "git@github.com:Moeriki/mongo-iterable-cursor.git",
   "main": "index.js",
   "scripts": {
     "lint": "eslint *.js test/",
     "test": "jest",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
-  "keywords": [],
-  "author": "Dieter Luypaert <dieterluypaert@icloud.com>",
-  "license": "MIT",
   "peerDependencies": {
     "mongodb": "^2.0.0"
   },

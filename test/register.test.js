@@ -15,9 +15,8 @@ describe('register', () => {
   let db, col;
 
   beforeAll(async () => {
-    db = await MongoClient.connect('mongodb://localhost:27017/test');
+    db = await MongoClient.connect('mongodb://localhost:27017/test-register');
     col = db.collection('test');
-    await col.remove({});
     await col.insertMany(fixtures);
   });
 

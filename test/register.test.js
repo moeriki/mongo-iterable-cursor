@@ -30,7 +30,7 @@ describe('register', () => {
 
   afterAll(async () => {
     await col.remove({});
-    await db.disconnect();
+    await db.close();
     deregister();
   });
 

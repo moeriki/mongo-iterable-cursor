@@ -24,17 +24,17 @@
     "mongodb": "^2.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "~7.1.1",
+    "babel-eslint": "^7.2.0",
     "babel-jest": "~19.0.0",
     "babel-plugin-transform-async-generator-functions": "~6.22.0",
     "babel-polyfill": "~6.23.0",
-    "babel-preset-env": "~1.1.10",
-    "coveralls": "~2.11.16",
-    "eslint": "~3.16.1",
-    "eslint-config-muriki": "~8.4.0",
+    "babel-preset-env": "^1.2.2",
+    "coveralls": "^2.12.0",
+    "eslint": "^3.18.0",
+    "eslint-config-muriki": "^8.5.4",
     "eslint-plugin-import": "~2.2.0",
     "eslint-plugin-jasmine": "~2.2.0",
-    "eslint-plugin-node": "~4.1.0",
+    "eslint-plugin-node": "^4.2.1",
     "jest": "~19.0.2",
     "mongodb": "^2.2.24"
   }

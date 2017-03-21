@@ -22,7 +22,7 @@
 
 Async iteration is a stage-3 proposal. Use with caution!
 
-Your setup needs to support async generator functions. If you are using babeljs you'll need at least the following config.
+Your setup needs to support async generator functions. If you are using Babel you'll need at least the following config.
 
 ```json
 {

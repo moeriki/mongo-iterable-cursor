@@ -52,7 +52,7 @@ for await (const user of iterable(users.find())) {
 Requiring `mongo-iterable-cursor/register` adds `[Symbol.asyncIterator]` to the [mongodb cursor](http://mongodb.github.io/node-mongodb-native/2.2/api/Cursor.html) `Cursor.prototype`.
 
 ```js
-require('mongo-iterable-cursor/register');
+const deregister = require('mongo-iterable-cursor/register');
 
 const { MongoClient } = require('mongodb');
 
@@ -62,4 +62,6 @@ const users = db.collection('users');
 for await (const user of users.find()) {
   //
 }
+
+deregister(); // remove property again
 ```

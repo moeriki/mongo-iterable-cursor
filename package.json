@@ -17,6 +17,9 @@
     "test": "jest",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
+  "dependencies": {
+    "register-toggle": "^2.1.0"
+  },
   "peerDependencies": {
     "mongodb": "^2.0.0"
   },

@@ -11,8 +11,8 @@
     <a href="https://coveralls.io/github/Moeriki/mongo-iterable-cursor?branch=master">
       <img src="https://coveralls.io/repos/github/Moeriki/mongo-iterable-cursor/badge.svg?branch=master" alt="Coverage Status"></img>
     </a>
-    <a href="https://david-dm.org/moeriki/mongodb-iterable-cursor">
-      <img src="https://david-dm.org/moeriki/mongodb-iterable-cursor/status.svg" alt="dependencies Status"></img>
+    <a href="https://david-dm.org/moeriki/mongo-iterable-cursor">
+      <img src="https://david-dm.org/moeriki/mongo-iterable-cursor/status.svg" alt="dependencies Status"></img>
     </a>
     <a href="https://snyk.io/test/github/moeriki/mongo-iterable-cursor">
       <img src="https://snyk.io/test/github/moeriki/mongo-iterable-cursor/badge.svg" alt="Known Vulnerabilities"></img>

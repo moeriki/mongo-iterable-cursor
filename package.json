@@ -15,7 +15,7 @@
   "scripts": {
     "lint": "eslint *.js test/",
     "test": "jest",
-    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "register-toggle": "^2.1.0"
@@ -29,7 +29,6 @@
     "babel-plugin-transform-async-generator-functions": "~6.22.0",
     "babel-polyfill": "~6.23.0",
     "babel-preset-env": "^1.2.2",
-    "coveralls": "^2.12.0",
     "eslint": "^3.18.0",
     "eslint-config-muriki": "^8.5.4",
     "eslint-plugin-import": "~2.2.0",

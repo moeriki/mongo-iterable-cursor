@@ -4,15 +4,20 @@ node_js:
   - "4"
   - "6"
   - "7"
+  - "8"
 
 services:
   - mongodb
 
+before_script:
+  - "npm install"
+
 script:
-  - "npm test"
+  - "npm run test:coverage"
 
 after_success:
-  - "npm run coveralls"
+  - "npm install coveralls"
+  - "cat ./coverage/lcov.info | coveralls"
 
 notifications:
   email: false

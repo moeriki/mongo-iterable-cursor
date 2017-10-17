@@ -1,10 +1,8 @@
-// modules
-
 const { MongoClient } = require('mongodb');
 
-const fixtures = require('./fixtures.json');
-
 const iterable = require('../index');
+
+const fixtures = require('./fixtures.json');
 
 // tests
 

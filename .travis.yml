@@ -9,6 +9,9 @@ node_js:
 services:
   - mongodb
 
+before_install:
+  - npm i -g npm@3
+
 before_script:
   - "npm install"
 

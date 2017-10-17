@@ -13,7 +13,7 @@
   "repository": "git@github.com:Moeriki/mongo-iterable-cursor.git",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint *.js test/",
+    "lint": "eslint --cache *.js test/",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },

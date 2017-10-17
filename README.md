@@ -14,54 +14,91 @@
     <a href="https://david-dm.org/moeriki/mongo-iterable-cursor">
       <img src="https://david-dm.org/moeriki/mongo-iterable-cursor/status.svg" alt="dependencies Status"></img>
     </a>
-    <a href="https://snyk.io/test/github/moeriki/mongo-iterable-cursor">
-      <img src="https://snyk.io/test/github/moeriki/mongo-iterable-cursor/badge.svg" alt="Known Vulnerabilities"></img>
-    </a>
   </p>
 </p>
 
 Async iteration is a stage-3 proposal. Use with caution!
 
+## Without babel
+
+You'll need Node.js 4 or above.
+
+```js
+const { MongoClient } = require('mongodb');
+const iterable = require('mongo-iterable-cursor');
+
+MongoClient.connect('mongodb://localhost:27017/test')
+    .then((db) => {
+        const users = db.collection('users');
+
+        for (const pendingUser of iterable(users.find())) {
+            pendingUser.then((user) => {
+                // handle user
+            });
+        }
+    })
+;
+```
+
+You can use [for-await](https://www.npmjs.com/package/for-await) to handle your items serially.
+
+```js
+const forAwait = require('for-await');
+const { MongoClient } = require('mongodb');
+const iterable = require('mongo-iterable-cursor');
+
+MongoClient.connect('mongodb://localhost:27017/test')
+    .then((db) => {
+        const users = db.collection('users');
+        return forAwait((user) => {
+          // handle user
+        }).of(iterable(users.find()));
+    })
+;
+```
+
+## With babel
+
 Your setup needs to support async generator functions. If you are using Babel you'll need at least the following config.
 
-```json
+```js
 {
-  "presets": ["es2017"],
+  "presets": ["es2017"], // or use Node.js v8 which includes async/await
   "plugins": [
     "transform-async-generator-functions"
   ]
 }
 ```
 
-## Manually
-
 ```js
-const { MongoClient } = require('mongodb');
 const iterable = require('mongo-iterable-cursor');
+const { MongoClient } = require('mongodb');
 
-const db = await MongoClient.connect('mongodb://localhost:27017/test');
-const users = db.collection('users');
+(async () => {
+  const db = await MongoClient.connect('mongodb://localhost:27017/test');
+  const users = db.collection('users');
 
-for await (const user of iterable(users.find())) {
-  //
-}
+  for await (const user of iterable(users.find())) {
+    //
+  }
+})();
 ```
 
-## Automatically
+## Register
 
 Requiring `mongo-iterable-cursor/register` adds `[Symbol.asyncIterator]` to the [mongodb cursor](http://mongodb.github.io/node-mongodb-native/2.2/api/Cursor.html) `Cursor.prototype`.
 
 ```js
-const deregister = require('mongo-iterable-cursor/register');
+require('mongo-iterable-cursor/register');
 
 const { MongoClient } = require('mongodb');
 
-const db = await MongoClient.connect('mongodb://localhost:27017/test');
-const users = db.collection('users');
+(async () => {
+  const db = await MongoClient.connect('mongodb://localhost:27017/test');
+  const users = db.collection('users');
 
-for await (const user of users.find()) {
-  //
-}
-
-deregister(); // remove property again
+  for await (const user of users.find()) {
+    //
+  }
+})();
 ```

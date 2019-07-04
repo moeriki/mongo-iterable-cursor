@@ -9,8 +9,8 @@ const fixtures = require('./fixtures.json');
 // tests
 
 describe('register', () => {
-
-  let db, col;
+  let db;
+  let col;
 
   beforeAll(async () => {
     db = await MongoClient.connect('mongodb://localhost:27017/test-register');
@@ -31,5 +31,4 @@ describe('register', () => {
     await db.close();
     deregister();
   });
-
 });

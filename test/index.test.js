@@ -7,8 +7,8 @@ const fixtures = require('./fixtures.json');
 // tests
 
 describe('iterableCursor', () => {
-
-  let db, col;
+  let db;
+  let col;
 
   beforeAll(async () => {
     db = await MongoClient.connect('mongodb://localhost:27017/test-index');
@@ -28,5 +28,4 @@ describe('iterableCursor', () => {
     await col.remove({});
     await db.close();
   });
-
 });

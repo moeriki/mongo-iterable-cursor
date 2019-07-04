@@ -28,17 +28,36 @@
   },
   "devDependencies": {
     "babel-cli": "~6.26.0",
-    "babel-eslint": "~8.0.1",
+    "babel-eslint": "~10.0.2",
     "babel-jest": "~19.0.0",
     "babel-plugin-transform-async-generator-functions": "~6.24.1",
     "babel-polyfill": "~6.26.0",
     "babel-preset-env": "^1.2.2",
-    "eslint": "~4.9.0",
-    "eslint-config-muriki": "~9.1.0",
-    "eslint-plugin-import": "~2.7.0",
-    "eslint-plugin-jasmine": "~2.9.1",
-    "eslint-plugin-node": "~5.2.0",
-    "jest": "~19.0.2",
-    "mongodb": "^2.2.24"
+    "eslint": "~6.0.1",
+    "eslint-config-airbnb-base": "~13.2.0",
+    "eslint-config-prettier": "~6.0.0",
+    "eslint-plugin-import": "~2.18.0",
+    "eslint-plugin-prettier": "~3.1.0",
+    "jest": "~24.8.0",
+    "mongodb": "^2.2.36",
+    "prettier": "~1.18.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "jest": true
+    },
+    "extends": [
+      "airbnb-base",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "no-await-in-loop": "off",
+      "no-restricted-syntax": "off"
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "arrowParens": "always"
   }
 }

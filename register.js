@@ -8,6 +8,6 @@ module.exports = register({
   properties: {
     [Symbol.asyncIterator]() {
       return iterableCursor(this);
-    },
-  },
+    }
+  }
 });

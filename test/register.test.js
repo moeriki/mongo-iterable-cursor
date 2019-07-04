@@ -1,12 +1,7 @@
-require('babel-polyfill');
-
 const { MongoClient } = require('mongodb');
 
 const deregister = require('../register');
-
 const fixtures = require('./fixtures.json');
-
-// tests
 
 describe('register', () => {
   let db;

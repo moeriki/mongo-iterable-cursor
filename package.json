@@ -11,14 +11,14 @@
   "author": "Dieter Luypaert <dieterluypaert@icloud.com>",
   "license": "MIT",
   "repository": "git@github.com:Moeriki/mongo-iterable-cursor.git",
-  "main": "build.js",
-  "main:jsnext": "index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "main": "index.js",
   "scripts": {
-    "build": "babel index.js -o build.js",
     "lint": "eslint --cache index.js test/",
     "test": "jest",
-    "test:coverage": "jest --coverage",
-    "prepublish": "npm run build"
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "register-toggle": "^2.1.0"
@@ -27,12 +27,6 @@
     "mongodb": "^2.0.0"
   },
   "devDependencies": {
-    "babel-cli": "~6.26.0",
-    "babel-eslint": "~10.0.2",
-    "babel-jest": "~19.0.0",
-    "babel-plugin-transform-async-generator-functions": "~6.24.1",
-    "babel-polyfill": "~6.26.0",
-    "babel-preset-env": "^1.2.2",
     "eslint": "~6.0.1",
     "eslint-config-airbnb-base": "~13.2.0",
     "eslint-config-prettier": "~6.0.0",

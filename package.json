@@ -11,6 +11,9 @@
   "author": "Dieter Luypaert <dieterluypaert@icloud.com>",
   "license": "MIT",
   "repository": "git@github.com:Moeriki/mongo-iterable-cursor.git",
+  "files": [
+    "index.js"
+  ],
   "engines": {
     "node": ">=10"
   },
